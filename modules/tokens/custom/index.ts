@@ -1,7 +1,8 @@
 import { constant } from '@neiv/config';
 import jwt, { JwtPayload } from 'jsonwebtoken';
+import type { StringValue } from "ms";
 
-const generateToken = (details: object, expiresIn = '2d') => {
+const generateToken = (details: object, expiresIn: StringValue = '2d') => {
   return jwt.sign(details, constant.mailTokenSecret, { expiresIn });
 };
 
