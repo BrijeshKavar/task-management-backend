@@ -2,6 +2,7 @@ import jwt from 'jsonwebtoken';
 import fs from 'fs';
 import { constant } from '@neiv/config';
 import { Request } from 'express';
+import type { StringValue } from "ms";
 
 const PRIVATE_KEY = fs.readFileSync(`${__dirname}/private-Key.key`);
 const PUBLIC_KEY = fs.readFileSync(`${__dirname}/public-Key.pub`);
@@ -13,8 +14,8 @@ interface SignJwtOptions {
 
 const signJwt = (details: unknown = null, options: SignJwtOptions = {}): string | null => {
   const { rememberMe = false, isRefreshToken = false } = options;
-  let expiresIn = rememberMe ? constant.rememberedTokenExpiry : constant.tokenExpiry;
-  if (isRefreshToken) expiresIn = constant.refreshTokenExpiry;
+  let expiresIn = (rememberMe ? constant.rememberedTokenExpiry : constant.tokenExpiry) as StringValue;
+  if (isRefreshToken) expiresIn = constant.refreshTokenExpiry as StringValue;
 
   if (!details) {
     return null;
