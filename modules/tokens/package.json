@@ -1,0 +1,19 @@
+{
+  "name": "@neiv/tokens",
+  "version": "1.0.0",
+  "author": "Ashish <ashish@techuz.com>",
+  "private": true,
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "crypto": "^1.0.1",
+    "fs": "^0.0.1-security",
+    "jsonwebtoken": "^8.5.1"
+  },
+  "scripts": {
+    "prepare": "node generator.js"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
+    "@types/jsonwebtoken": "^9.0.2"
+  }
+}

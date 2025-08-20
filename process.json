@@ -1,0 +1,9 @@
+{
+  'apps': [
+    {
+      'name': 'task-management-server',
+      'script': 'npm',
+      'args': 'run prod'
+    }
+  ]
+}

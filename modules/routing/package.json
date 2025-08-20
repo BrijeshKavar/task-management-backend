@@ -1,0 +1,11 @@
+{
+  "name": "@neiv/routing",
+  "version": "1.0.0",
+  "private": true,
+  "author": "Ashish <ashish@techuz.com>",
+  "dependencies": {
+    "@hapi/joi-date": "^2.0.1",
+    "@joi/date": "^2.1.0",
+    "multer": "^1.4.4"
+  }
+}

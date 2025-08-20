@@ -1,0 +1,12 @@
+{
+  "name": "@neiv/middlewares",
+  "version": "1.0.0",
+  "author": "Ashish <ashish@techuz.com>",
+  "private": true,
+  "dependencies": {
+    "multer": "^1.4.4"
+  },
+  "devDependencies": {
+    "@types/multer": "^1.4.7"
+  }
+}

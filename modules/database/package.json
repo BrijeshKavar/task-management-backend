@@ -1,0 +1,21 @@
+{
+  "name": "@neiv/db",
+  "version": "1.0.0",
+  "private": true,
+  "author": "Ashish <ashish@techuz.com>",
+  "dependencies": {
+    "knex": "^1.0.1",
+    "objection": "^3.1.4",
+    "mysql": "^2.18.1",
+    "objection-soft-delete": "^1.0.7",
+    "@faker-js/faker": "^8.3.1"
+  },
+  "scripts": {
+    "make-migration": "knex migrate:make",
+    "make-seed": "knex seed:make",
+    "run-seed": "knex seed:run",
+    "migrate": "knex migrate:latest",
+    "rollback": "knex migrate:rollback",
+    "clear-db": "knex migrate:rollback --all"
+  }
+}
