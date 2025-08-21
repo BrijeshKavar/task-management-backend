@@ -76,3 +76,6 @@ process.on('unhandledRejection', reason => {
   log.error(reason);
   process.exit(1);
 });
+
+// CRITICAL: Export the app for Vercel
+export default app;
