@@ -1,15 +1,18 @@
 {
     "version": 2,
+    "name": "task-management",
     "builds": [
         {
-            "src": "src/index.ts",
+            "src": "packages/server/build/index.js",
             "use": "@vercel/node"
         }
     ],
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "/src/index.ts"
+            "dest": "packages/server/build/index.js"
         }
-    ]
+    ],
+    "installCommand": "npm install && npm run bootstrap",
+    "buildCommand": "npm run build"
 }

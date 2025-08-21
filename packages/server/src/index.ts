@@ -59,9 +59,12 @@ knex
   .raw('SELECT 1')
   .then(() => {
     queryLog();
-    app.listen(appSettings.port, () => {
-      log.info(`⚡️ Server is running at port ${appSettings.port}`);
-    });
+    // Only start server locally
+    if (process.env.NODE_ENV !== 'production' && !process.env.VERCEL) {
+      app.listen(appSettings.port, () => {
+        log.info(`⚡️ Server is running at port ${appSettings.port}`);
+      });
+    }
   })
   .catch(err => {
     log.error('Unable to connect with the database', err);
